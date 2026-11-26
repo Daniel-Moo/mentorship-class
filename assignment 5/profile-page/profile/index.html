@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temi Adeyemi – Accessible web builder and field recordist</title>
+  <meta name="description" content="Personal profile of Temi Adeyemi, with a voice note, a short intro video and a look at the workspace.">
+</head>
+<body>
+  <header>
+    <h1>Temi Adeyemi</h1>
+    <p>Accessible web builder and field recordist</p>
+    <!-- Meaningful image: the alt text says who and what is shown. Width and height are the file's real size. -->
+    <img src="images/profile.jpg" width="400" height="400"
+         alt="Illustrated portrait of Temi: a smiling person with short curly black hair and round glasses, wearing a mustard-yellow sweater against a blue background.">
+    <p>I build websites that work with a keyboard, a screen reader or a slow phone connection. Away from the screen, I record everyday sounds and turn them into short pieces of music.</p>
+  </header>
+
+  <!-- Decorative image: it adds no information, so alt is empty and screen readers skip it. -->
+  <img src="images/divider.svg" width="600" height="60" alt="">
+
+  <main>
+    <section aria-labelledby="about">
+      <h2 id="about">About</h2>
+      <p>I spend my days checking that forms, menus and charts make sense for everyone who meets them. I like plain HTML, honest labels and pages that load before you notice.</p>
+      <dl>
+        <dt>Focus</dt><dd>Accessible front-end development</dd>
+        <dt>Also</dt><dd>Field recording and sound design</dd>
+        <dt>Tools</dt><dd>HTML, a screen reader, a small microphone</dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="listen">
+      <h2 id="listen">Listen: a ten-second sketch</h2>
+      <p>A short piano-style melody I composed for this page.</p>
+      <audio controls preload="none" aria-describedby="audio-note">
+        <source src="audio/hello.ogg" type="audio/ogg; codecs=vorbis">
+        <source src="audio/hello.mp3" type="audio/mpeg">
+        Your browser can’t play this audio. You can
+        <a href="audio/hello.mp3">download the sketch as an MP3 (80 KB)</a> instead.
+      </audio>
+      <p id="audio-note"><small>Description: a slow, gentle sequence of single notes over a soft, steady hum. There are no words.</small></p>
+    </section>
+
+    <section aria-labelledby="watch">
+      <h2 id="watch">Watch: a six-second hello</h2>
+      <video controls preload="metadata" width="640" height="360" poster="images/poster.jpg">
+        <source src="video/intro.webm" type="video/webm; codecs=vp9,opus">
+        <source src="video/intro.mp4" type="video/mp4">
+        Your browser can’t play this video. You can
+        <a href="video/intro.mp4">download the intro as an MP4 (208 KB)</a> instead.
+      </video>
+      <details>
+        <summary>Text alternative for the video</summary>
+        <p>On a blue background, rows of yellow bars rise and fall like a sound wave. The name “Temi Adeyemi” fades in at the top left, with the line “Accessible web builder and field recordist” below it. The soundtrack is the same melody as the audio sketch above. Nobody speaks.</p>
+      </details>
+    </section>
+
+    <section aria-labelledby="workspace">
+      <h2 id="workspace">Where I work</h2>
+      <figure>
+        <img src="images/workspace.jpg" width="800" height="500" loading="lazy"
+             alt="Illustration of a wooden desk with an open laptop showing lines of code, a yellow microphone on a stand, and a potted plant in the corner.">
+        <figcaption>My desk setup: the laptop is for building pages, the microphone is for recording the sounds I turn into music.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>All images, audio and video on this page were created for it and are free to reuse. Temi Adeyemi is a fictional profile used as a template; replace the text and media with your own.</p>
+  </footer>
+</body>
+</html>
